@@ -68,9 +68,6 @@ nav a {
   width: auto;
   padding-top: 75px;
 }
-
-
-
 .feeter{
   background-color: #E0E0E0;
 }
@@ -83,4 +80,23 @@ nav a {
   text-align: center;
   text-decoration: none;
   font-size:20px;
+}
+
+.intro{
+  max-width: 642px;
+  margin: 0 auto;
+}
+
+section div h3{
+    background-color: white;
+    display: inline-block;
+    height: 100%;
+    padding: 5%;
+
+}
+
+/*REFS*/
+
+p.name{
+  text-align: right;
 }
