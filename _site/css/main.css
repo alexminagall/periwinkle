@@ -7,14 +7,15 @@ Intro Section
 Banner
 Why Choose Us
 Recent Projects
+Services
 */
 
-/*Universal*/
+/*-----------------Universal---------------*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 img{
   max-width: 300px;
@@ -22,18 +23,47 @@ img{
 }
 
 body{
-  background-color: #CCFFE5;
+  /*background-color: #CCFFE5;*/
 }
 
+h1, h2, h3, a{
+  font-family: 'Exo', sans-serif;
+
+}
 p {
   color: black;
+  font-family: 'Alegreya Sans', sans-serif;
+
 }
 
+section div h3{
+    background-color: white;
+    display: inline-block;
+    height: 100%;
+    padding: 5%;
+    border: 2px solid grey;
+}
+
+section{
+  padding:5% 10vw;
+}
 .float-it{
   float: right;
 }
 
-/*Header*/
+/*----------------Header------------------*/
+div.nav-bar{
+  /*border-bottom: 2px solid grey;*/
+  margin-bottom: 2%;
+}
+
+.move{
+  margin-right: 10%;
+  float: right;
+  margin-top: 11%;
+}
+
+
 .nav-bar {
   background-color: white;
 }
@@ -54,23 +84,32 @@ nav a {
   text-decoration: none;
   color: black;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10%;
   height: 50px;
   background-color: white;
+  margin-top: 17.5%;
+  font-size: 16.25px;
 }
 
 .socials {
   display: inline-block;
-
 }
 .socials img{
   height: 10px;
   width: auto;
   padding-top: 75px;
 }
+
+/*-----------------Footer----------------*/
 .feeter{
-  background-color: #E0E0E0;
+  /*background-color: #E0E0E0;*/
 }
+.smaller{
+  max-height: 80px;
+  padding-top: 2%;
+  border-top: 2px solid grey;
+}
+
 
 .contact-us{
   display: block;
@@ -87,16 +126,280 @@ nav a {
   margin: 0 auto;
 }
 
-section div h3{
-    background-color: white;
-    display: inline-block;
-    height: 100%;
-    padding: 5%;
 
+
+/*intro*/
+
+.contacto{
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+  width: 100%;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
 }
-
 /*REFS*/
 
 p.name{
   text-align: right;
+}
+
+.refz{
+  margin-top: 5%;
+  border-top: 2px solid grey;
+  font-size: 16px;
+}
+
+.block-me{
+  display: block;
+}
+
+/*Services*/
+.services-box{
+  text-align: center;
+}
+
+.services-box h3{
+  margin-top: -30px;
+}
+
+.services-box p{
+  margin-top: 5%;
+  border-top: 2px solid grey;
+}
+
+/*About*/
+div h2{
+  text-align: right;
+}
+.abouto h3{
+  padding: 0;
+  border: none;
+  height: auto;
+}
+.abouto img{
+  max-height: none;
+  max-width: none;
+  float: right;
+}
+
+.abouto{
+  padding-bottom: 2%
+}
+
+.abouto p{
+  font-size: 17px
+}
+
+/*Recent Projects*/
+.project img{
+  max-width: 193px;
+  max-height: auto;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+
+/*contact*/
+.lower{
+  margin-top: 0.2%;
+}
+.lower p{
+  margin: 3%;
+  font-size: 17px
+}
+.lower div{
+  height: 10%;
+}
+
+/*Our Projects*/
+
+.our-projects h3{
+  padding: 2%;
+  height: auto;
+  margin-bottom: 3%
+}
+
+.subtitle{
+  display: block;
+}
+
+.our-projects img{
+  max-width: 100%;
+  display: block;
+}
+
+.texty p{
+  padding: 2%;
+  text-align: justify;
+  border: 1px solid grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*OTHER THINGS DON'T TOUCH!!*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #cbc6c1;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: #e2dedb;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+  color: #cbc6c1;
+}
+
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: #726659;
+
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+
+  border: solid 1px #b3aca7;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+#submit {
+  width: 502px;
+
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+
+  outline:none;
+  cursor: pointer;
+
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+
+#submit:hover {
+  color: #e2dedb;
 }
