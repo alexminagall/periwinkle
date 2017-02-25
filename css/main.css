@@ -107,9 +107,13 @@ nav a {
 .smaller{
   max-height: 80px;
   padding-top: 2%;
-  border-top: 2px solid grey;
+  /*border-top: 2px solid grey;*/
 }
 
+.logo img{
+  max-height: 50%;
+  max-width: auto;
+}
 
 .contact-us{
   display: block;
@@ -237,7 +241,7 @@ div h2{
   padding: 2%;
   text-align: center;
   margin-bottom: 2%;
-  
+
 }
 
 
