@@ -1,5 +1,9 @@
-$( document ).ready(function() {
-    //jQuery
+// has jqurey as a dependcy
 
-    console.log( "ready!" );
+$(document).ready(function(){
+  $('.gallery-pic').mouseenter(function(e) {
+    var background = $(this).attr("data-pic");
+$(".gallery-target").css("background-image","url("+ background +")");
+  });
 });
+  
