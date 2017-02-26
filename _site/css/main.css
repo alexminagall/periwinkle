@@ -71,13 +71,14 @@ div.nav-bar{
 
 .logo-div {
   height: auto;
+  padding: 0;
 }
 
 .logo {
   display: inline-block;
   width: 350px;
   height: auto;
-  padding: 10px;
+  padding: 20px 20px 0;
 }
 
 nav a {
@@ -85,10 +86,8 @@ nav a {
   text-decoration: none;
   color: black;
   display: inline-block;
-  margin-right: 10%;
-  height: 50px;
+  margin-right: 5%;
   background-color: white;
-  margin-top: 17.5%;
   font-size: 16.25px;
 }
 
@@ -142,7 +141,7 @@ nav a {
 
 
 .social{
-  
+
 }
 /*intro*/
 
