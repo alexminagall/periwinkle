@@ -105,17 +105,19 @@ nav a {
 .feeter{
   /*background-color: #E0E0E0;*/
 }
+
+.socials-big{
+  text-align: center;
+}
 .smaller{
   max-height: 80px;
   padding-top: 2%;
   /*border-top: 2px solid grey;*/
 }
-
 .logo img{
   max-height: 50%;
   max-width: auto;
 }
-
 .contact-us{
   display: block;
   width: 100%;
@@ -139,7 +141,9 @@ nav a {
 }
 
 
-
+.social{
+  
+}
 /*intro*/
 
 .contacto{
@@ -152,10 +156,18 @@ nav a {
   border-bottom: 2px solid grey;
 }
 .pgraph{
-  width: 165%;
+  width: 185%;
   font-size: 18px;
   text-align: right;
 }
+
+h4{
+  text-decoration: none;
+  width: 185%;
+  color: black;
+  text-align: center;
+}
+
 /*REFS*/
 
 p.name{
@@ -209,6 +221,13 @@ div h2{
   font-size: 17px
 }
 
+.about-title{
+  float: right;
+}
+.vals h3{
+  height: 30%;
+  text-align: center;
+}
 /*Recent Projects*/
 .project img{
   max-width: 193px;
