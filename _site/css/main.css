@@ -151,6 +151,11 @@ nav a {
   border-top: 2px solid grey;
   border-bottom: 2px solid grey;
 }
+.pgraph{
+  width: 165%;
+  font-size: 18px;
+  text-align: right;
+}
 /*REFS*/
 
 p.name{
@@ -443,4 +448,9 @@ textarea:hover {
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
+}
+
+
+.gallery-sect{
+  margin-left: 5%;
 }
