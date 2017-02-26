@@ -220,12 +220,28 @@ div h2{
   font-size: 17px
 }
 
-.about-title{
+.about-title h2{
   float: right;
+  border-top: 2px solid white;
 }
 .vals h3{
-  height: 30%;
+  height: auto;
   text-align: center;
+  background-color: rgba(72,76,97,0);
+  color: white;
+  border: none;
+}
+.vals p{
+  text-align: center;
+  color: white;
+}
+.vals img{
+  background-color: grey;
+  align-items: center;
+}
+.valz{
+  background-color: grey;
+
 }
 /*Recent Projects*/
 .project img{
