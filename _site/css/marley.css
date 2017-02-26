@@ -1,14 +1,14 @@
 .marley-container {
 	position: relative;
 	margin: 0 auto;
-	padding: 1em 0 4em;
+	padding: 1em 0 0;
 	max-width: 1000px;
 	list-style: none;
 	text-align: center;
 }
 
 /* Common style */
-.marley-container figure {
+.marley-container .effect-marley {
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -22,15 +22,15 @@
 	cursor: pointer;
 }
 
-.marley-container figure img {
+.marley-container .effect-marley img {
 	position: relative;
 	display: block;
 	min-height: 100%;
 	max-width: 100%;
-	opacity: 0.8;
+	opacity: 0.4;
 }
 
-.marley-container figure figcaption {
+.marley-container .effect-marley .marley-caption {
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
@@ -39,23 +39,23 @@
 	backface-visibility: hidden;
 }
 
-.marley-container figure figcaption::before,
-.marley-container figure figcaption::after {
+.marley-container .effect-marley .marley-caption::before,
+.marley-container .effect-marley .marley-caption::after {
 	pointer-events: none;
 }
 
-.marley-container figure figcaption,
-.marley-container figure figcaption > a {
+.marley-container .effect-marley .marley-caption,
+.marley-container .effect-marley .marley-caption > a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
 }
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.marley-container figure figcaption > a {
+.marley-container .effect-marley .marley-caption > a {
 	z-index: 1000;
 	text-indent: 200%;
 	white-space: nowrap;
@@ -63,21 +63,21 @@
 	opacity: 0;
 }
 
-.marley-container figure h2 {
+.marley-container .effect-marley h2 {
 	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
-.marley-container figure h2 span {
+.marley-container .effect-marley h2 span {
 	font-weight: 800;
 }
 
-.marley-container figure h2,
-.marley-container figure p {
+.marley-container .effect-marley h2,
+.marley-container .effect-marley p {
 	margin: 0;
 }
 
-.marley-container figure p {
+.marley-container .effect-marley p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
@@ -88,7 +88,7 @@
 /***** Lily *****/
 /*---------------*/
 
-figure.effect-lily img {
+.effect-marley.effect-lily img {
 	max-width: none;
 	width: -webkit-calc(100% + 50px);
 	width: calc(100% + 50px);
@@ -99,11 +99,11 @@ figure.effect-lily img {
 	transform: translate3d(-40px,0,0);
 }
 
-figure.effect-lily figcaption {
+.effect-marley.effect-lily .marley-caption {
 	text-align: left;
 }
 
-figure.effect-lily figcaption > div {
+.effect-marley.effect-lily .marley-caption > div {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -112,37 +112,37 @@ figure.effect-lily figcaption > div {
 	height: 50%;
 }
 
-figure.effect-lily h2,
-figure.effect-lily p {
+.effect-marley.effect-lily h2,
+.effect-marley.effect-lily p {
 	-webkit-transform: translate3d(0,40px,0);
 	transform: translate3d(0,40px,0);
 }
 
-figure.effect-lily h2 {
+.effect-marley.effect-lily h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-figure.effect-lily p {
+.effect-marley.effect-lily p {
 	color: rgba(255,255,255,0.8);
 	opacity: 0;
 	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
 	transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.effect-lily:hover img,
-figure.effect-lily:hover p {
+.effect-marley.effect-lily:hover img,
+.effect-marley.effect-lily:hover p {
 	opacity: 1;
 }
 
-figure.effect-lily:hover img,
-figure.effect-lily:hover h2,
-figure.effect-lily:hover p {
+.effect-marley.effect-lily:hover img,
+.effect-marley.effect-lily:hover h2,
+.effect-marley.effect-lily:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-lily:hover p {
+.effect-marley.effect-lily:hover p {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 	-webkit-transition-duration: 0.35s;
@@ -153,7 +153,7 @@ figure.effect-lily:hover p {
 /***** Sadie *****/
 /*---------------*/
 
-figure.effect-sadie figcaption::before {
+.effect-marley.effect-sadie .marley-caption::before {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -167,7 +167,7 @@ figure.effect-sadie figcaption::before {
 	transform: translate3d(0,50%,0);
 }
 
-figure.effect-sadie h2 {
+.effect-marley.effect-sadie h2 {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -179,13 +179,13 @@ figure.effect-sadie h2 {
 	transform: translate3d(0,-50%,0);
 }
 
-figure.effect-sadie figcaption::before,
-figure.effect-sadie p {
+.effect-marley.effect-sadie .marley-caption::before,
+.effect-marley.effect-sadie p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-sadie p {
+.effect-marley.effect-sadie p {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -196,14 +196,14 @@ figure.effect-sadie p {
 	transform: translate3d(0,10px,0);
 }
 
-figure.effect-sadie:hover h2 {
+.effect-marley.effect-sadie:hover h2 {
 	color: #fff;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 }
 
-figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover p {
+.effect-marley.effect-sadie:hover .marley-caption::before ,
+.effect-marley.effect-sadie:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -213,12 +213,12 @@ figure.effect-sadie:hover p {
 /***** Roxy *****/
 /*---------------*/
 
-figure.effect-roxy {
+.effect-marley.effect-roxy {
 	background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
 	background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
 }
 
-figure.effect-roxy img {
+.effect-marley.effect-roxy img {
 	max-width: none;
 	width: -webkit-calc(100% + 60px);
 	width: calc(100% + 60px);
@@ -228,7 +228,7 @@ figure.effect-roxy img {
 	transform: translate3d(-50px,0,0);
 }
 
-figure.effect-roxy figcaption::before {
+.effect-marley.effect-roxy .marley-caption::before {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -243,16 +243,16 @@ figure.effect-roxy figcaption::before {
 	transform: translate3d(-20px,0,0);
 }
 
-figure.effect-roxy figcaption {
+.effect-marley.effect-roxy .marley-caption {
 	padding: 3em;
 	text-align: left;
 }
 
-figure.effect-roxy h2 {
+.effect-marley.effect-roxy h2 {
 	padding: 30% 0 10px 0;
 }
 
-figure.effect-roxy p {
+.effect-marley.effect-roxy p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -260,14 +260,14 @@ figure.effect-roxy p {
 	transform: translate3d(-10px,0,0);
 }
 
-figure.effect-roxy:hover img {
+.effect-marley.effect-roxy:hover img {
 	opacity: 0.7;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-roxy:hover figcaption::before,
-figure.effect-roxy:hover p {
+.effect-marley.effect-roxy:hover .marley-caption::before,
+.effect-marley.effect-roxy:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -277,22 +277,22 @@ figure.effect-roxy:hover p {
 /***** Bubba *****/
 /*---------------*/
 
-figure.effect-bubba {
+.effect-marley.effect-bubba {
 	background: #9e5406;
 }
 
-figure.effect-bubba img {
+.effect-marley.effect-bubba img {
 	opacity: 0.7;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
 
-figure.effect-bubba:hover img {
+.effect-marley.effect-bubba:hover img {
 	opacity: 0.4;
 }
 
-figure.effect-bubba figcaption::before,
-figure.effect-bubba figcaption::after {
+.effect-marley.effect-bubba .marley-caption::before,
+.effect-marley.effect-bubba .marley-caption::after {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -304,21 +304,21 @@ figure.effect-bubba figcaption::after {
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-bubba figcaption::before {
+.effect-marley.effect-bubba .marley-caption::before {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	-webkit-transform: scale(0,1);
 	transform: scale(0,1);
 }
 
-figure.effect-bubba figcaption::after {
+.effect-marley.effect-bubba .marley-caption::after {
 	border-right: 1px solid #fff;
 	border-left: 1px solid #fff;
 	-webkit-transform: scale(1,0);
 	transform: scale(1,0);
 }
 
-figure.effect-bubba h2 {
+.effect-marley.effect-bubba h2 {
 	padding-top: 30%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -326,7 +326,7 @@ figure.effect-bubba h2 {
 	transform: translate3d(0,-20px,0);
 }
 
-figure.effect-bubba p {
+.effect-marley.effect-bubba p {
 	padding: 20px 2.5em;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -335,15 +335,15 @@ figure.effect-bubba p {
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-bubba:hover figcaption::before,
-figure.effect-bubba:hover figcaption::after {
+.effect-marley.effect-bubba:hover .marley-caption::before,
+.effect-marley.effect-bubba:hover .marley-caption::after {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-bubba:hover h2,
-figure.effect-bubba:hover p {
+.effect-marley.effect-bubba:hover h2,
+.effect-marley.effect-bubba:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -353,26 +353,26 @@ figure.effect-bubba:hover p {
 /***** Romeo *****/
 /*---------------*/
 
-figure.effect-romeo {
+.effect-marley.effect-romeo {
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 }
 
-figure.effect-romeo img {
+.effect-marley.effect-romeo img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,0,300px);
 	transform: translate3d(0,0,300px);
 }
 
-figure.effect-romeo:hover img {
+.effect-marley.effect-romeo:hover img {
 	opacity: 0.6;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-romeo figcaption::before,
-figure.effect-romeo figcaption::after {
+.effect-marley.effect-romeo .marley-caption::before,
+.effect-marley.effect-romeo .marley-caption::after {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -386,20 +386,20 @@ figure.effect-romeo figcaption::after {
 	transform: translate3d(-50%,-50%,0);
 }
 
-figure.effect-romeo:hover figcaption::before {
+.effect-marley.effect-romeo:hover .marley-caption::before {
 	opacity: 0.5;
 	-webkit-transform: translate3d(-50%,-50%,0) rotate(45deg);
 	transform: translate3d(-50%,-50%,0) rotate(45deg);
 }
 
-figure.effect-romeo:hover figcaption::after {
+.effect-marley.effect-romeo:hover .marley-caption::after {
 	opacity: 0.5;
 	-webkit-transform: translate3d(-50%,-50%,0) rotate(-45deg);
 	transform: translate3d(-50%,-50%,0) rotate(-45deg);
 }
 
-figure.effect-romeo h2,
-figure.effect-romeo p {
+.effect-marley.effect-romeo h2,
+.effect-marley.effect-romeo p {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -408,23 +408,23 @@ figure.effect-romeo p {
 	transition: transform 0.35s;
 }
 
-figure.effect-romeo h2 {
+.effect-marley.effect-romeo h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
 }
 
-figure.effect-romeo p {
+.effect-marley.effect-romeo p {
 	padding: 0.25em 2em;
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,150%,0);
 }
 
-figure.effect-romeo:hover h2 {
+.effect-marley.effect-romeo:hover h2 {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 }
 
-figure.effect-romeo:hover p {
+.effect-marley.effect-romeo:hover p {
 	-webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,100%,0);
 }
@@ -433,26 +433,26 @@ figure.effect-romeo:hover p {
 /***** Layla *****/
 /*---------------*/
 
-figure.effect-layla {
+.effect-marley.effect-layla {
 	background: #18a367;
 }
 
-figure.effect-layla img {
+.effect-marley.effect-layla img {
 	height: 390px;
 }
 
-figure.effect-layla figcaption {
+.effect-marley.effect-layla .marley-caption {
 	padding: 3em;
 }
 
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after {
+.effect-marley.effect-layla .marley-caption::before,
+.effect-marley.effect-layla .marley-caption::after {
 	position: absolute;
 	content: '';
 	opacity: 0;
 }
 
-figure.effect-layla figcaption::before {
+.effect-marley.effect-layla .marley-caption::before {
 	top: 50px;
 	right: 30px;
 	bottom: 50px;
@@ -465,7 +465,7 @@ figure.effect-layla figcaption::before {
 	transform-origin: 0 0;
 }
 
-figure.effect-layla figcaption::after {
+.effect-marley.effect-layla .marley-caption::after {
 	top: 30px;
 	right: 50px;
 	bottom: 30px;
@@ -478,13 +478,13 @@ figure.effect-layla figcaption::after {
 	transform-origin: 100% 0;
 }
 
-figure.effect-layla h2 {
+.effect-marley.effect-layla h2 {
 	padding-top: 26%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-figure.effect-layla p {
+.effect-marley.effect-layla p {
 	padding: 0.5em 2em;
 	text-transform: none;
 	opacity: 0;
@@ -492,44 +492,44 @@ figure.effect-layla p {
 	transform: translate3d(0,-10px,0);
 }
 
-figure.effect-layla img,
-figure.effect-layla h2 {
+.effect-marley.effect-layla img,
+.effect-marley.effect-layla h2 {
 	-webkit-transform: translate3d(0,-30px,0);
 	transform: translate3d(0,-30px,0);
 }
 
-figure.effect-layla img,
-figure.effect-layla figcaption::before,
-figure.effect-layla figcaption::after,
-figure.effect-layla p {
+.effect-marley.effect-layla img,
+.effect-marley.effect-layla .marley-caption::before,
+.effect-marley.effect-layla .marley-caption::after,
+.effect-marley.effect-layla p {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-layla:hover img {
+.effect-marley.effect-layla:hover img {
 	opacity: 0.7;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-layla:hover figcaption::before,
-figure.effect-layla:hover figcaption::after {
+.effect-marley.effect-layla:hover .marley-caption::before,
+.effect-marley.effect-layla:hover .marley-caption::after {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p {
+.effect-marley.effect-layla:hover h2,
+.effect-marley.effect-layla:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-layla:hover figcaption::after,
-figure.effect-layla:hover h2,
-figure.effect-layla:hover p,
-figure.effect-layla:hover img {
+.effect-marley.effect-layla:hover .marley-caption::after,
+.effect-marley.effect-layla:hover h2,
+.effect-marley.effect-layla:hover p,
+.effect-marley.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
@@ -538,21 +538,21 @@ figure.effect-layla:hover img {
 /***** Honey *****/
 /*---------------*/
 
-figure.effect-honey {
+.effect-marley.effect-honey {
 	background: #4a3753;
 }
 
-figure.effect-honey img {
+.effect-marley.effect-honey img {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
 
-figure.effect-honey:hover img {
+.effect-marley.effect-honey:hover img {
 	opacity: 0.5;
 }
 
-figure.effect-honey figcaption::before {
+.effect-marley.effect-honey .marley-caption::before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -564,7 +564,7 @@ figure.effect-honey figcaption::before {
 	transform: translate3d(0,10px,0);
 }
 
-figure.effect-honey h2 {
+.effect-marley.effect-honey h2 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -575,7 +575,7 @@ figure.effect-honey h2 {
 	transform: translate3d(0,-30px,0);
 }
 
-figure.effect-honey h2 i {
+.effect-marley.effect-honey h2 i {
 	font-style: normal;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -584,15 +584,15 @@ figure.effect-honey h2 i {
 	transform: translate3d(0,-30px,0);
 }
 
-figure.effect-honey figcaption::before,
-figure.effect-honey h2 {
+.effect-marley.effect-honey .marley-caption::before,
+.effect-marley.effect-honey h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
 
-figure.effect-honey:hover figcaption::before,
-figure.effect-honey:hover h2,
-figure.effect-honey:hover h2 i {
+.effect-marley.effect-honey:hover .marley-caption::before,
+.effect-marley.effect-honey:hover h2,
+.effect-marley.effect-honey:hover h2 i {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -602,25 +602,25 @@ figure.effect-honey:hover h2 i {
 /***** Oscar *****/
 /*---------------*/
 
-figure.effect-oscar {
+.effect-marley.effect-oscar {
 	background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
 	background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
 }
 
-figure.effect-oscar img {
+.effect-marley.effect-oscar img {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
 
-figure.effect-oscar figcaption {
+.effect-marley.effect-oscar .marley-caption {
 	padding: 3em;
 	background-color: rgba(58,52,42,0.7);
 	-webkit-transition: background-color 0.35s;
 	transition: background-color 0.35s;
 }
 
-figure.effect-oscar figcaption::before {
+.effect-marley.effect-oscar .marley-caption::before {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -630,7 +630,7 @@ figure.effect-oscar figcaption::before {
 	content: '';
 }
 
-figure.effect-oscar h2 {
+.effect-marley.effect-oscar h2 {
 	margin: 20% 0 10px 0;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -638,8 +638,8 @@ figure.effect-oscar h2 {
 	transform: translate3d(0,100%,0);
 }
 
-figure.effect-oscar figcaption::before,
-figure.effect-oscar p {
+.effect-marley.effect-oscar .marley-caption::before,
+.effect-marley.effect-oscar p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -647,23 +647,23 @@ figure.effect-oscar p {
 	transform: scale(0);
 }
 
-figure.effect-oscar:hover h2 {
+.effect-marley.effect-oscar:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-oscar:hover figcaption::before,
-figure.effect-oscar:hover p {
+.effect-marley.effect-oscar:hover .marley-caption::before,
+.effect-marley.effect-oscar:hover p {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-oscar:hover figcaption {
+.effect-marley.effect-oscar:hover .marley-caption {
 	background-color: rgba(58,52,42,0);
 }
 
-figure.effect-oscar:hover img {
+.effect-marley.effect-oscar:hover img {
 	opacity: 0.4;
 }
 
@@ -671,12 +671,12 @@ figure.effect-oscar:hover img {
 /***** Marley *****/
 /*---------------*/
 
-figure.effect-marley figcaption {
+.effect-marley.effect-marley .marley-caption {
 	text-align: right;
 }
 
-figure.effect-marley h2,
-figure.effect-marley p {
+.effect-marley.effect-marley h2,
+.effect-marley.effect-marley p {
 	position: absolute;
 	right: 30px;
 	left: 30px;
@@ -684,14 +684,14 @@ figure.effect-marley p {
 }
 
 
-figure.effect-marley p {
+.effect-marley.effect-marley p {
 	bottom: 30px;
 	line-height: 1.5;
 	-webkit-transform: translate3d(0,100%,0);
 	transform: translate3d(0,100%,0);
 }
 
-figure.effect-marley h2 {
+.effect-marley.effect-marley h2 {
 	top: 30px;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -699,12 +699,12 @@ figure.effect-marley h2 {
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-marley:hover h2 {
+.effect-marley.effect-marley:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-marley h2::after {
+.effect-marley.effect-marley h2::after {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -716,15 +716,15 @@ figure.effect-marley h2::after {
 	transform: translate3d(0,40px,0);
 }
 
-figure.effect-marley h2::after,
-figure.effect-marley p {
+.effect-marley.effect-marley h2::after,
+.effect-marley.effect-marley p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-marley:hover h2::after,
-figure.effect-marley:hover p {
+.effect-marley.effect-marley:hover h2::after,
+.effect-marley.effect-marley:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -734,11 +734,11 @@ figure.effect-marley:hover p {
 /***** Ruby *****/
 /*---------------*/
 
-figure.effect-ruby {
+.effect-marley.effect-ruby {
 	background-color: #17819c;
 }
 
-figure.effect-ruby img {
+.effect-marley.effect-ruby img {
 	opacity: 0.7;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -746,13 +746,13 @@ figure.effect-ruby img {
 	transform: scale(1.15);
 }
 
-figure.effect-ruby:hover img {
+.effect-marley.effect-ruby:hover img {
 	opacity: 0.5;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-ruby h2 {
+.effect-marley.effect-ruby h2 {
 	margin-top: 20%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -760,7 +760,7 @@ figure.effect-ruby h2 {
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-ruby p {
+.effect-marley.effect-ruby p {
 	margin: 1em 0 0;
 	padding: 3em;
 	border: 1px solid #fff;
@@ -771,12 +771,12 @@ figure.effect-ruby p {
 	transform: translate3d(0,20px,0) scale(1.1);
 }
 
-figure.effect-ruby:hover h2 {
+.effect-marley.effect-ruby:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-ruby:hover p {
+.effect-marley.effect-ruby:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
@@ -786,11 +786,11 @@ figure.effect-ruby:hover p {
 /***** Milo *****/
 /*---------------*/
 
-figure.effect-milo {
+.effect-marley.effect-milo {
 	background: #2e5d5a;
 }
 
-figure.effect-milo img {
+.effect-marley.effect-milo img {
 	max-width: none;
 	width: -webkit-calc(100% + 60px);
 	width: calc(100% + 60px);
@@ -803,20 +803,20 @@ figure.effect-milo img {
 	backface-visibility: hidden;
 }
 
-figure.effect-milo:hover img {
+.effect-marley.effect-milo:hover img {
 	opacity: 0.5;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
 }
 
-figure.effect-milo h2 {
+.effect-marley.effect-milo h2 {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	padding: 1em 1.2em;
 }
 
-figure.effect-milo p {
+.effect-marley.effect-milo p {
 	padding: 0 10px 0 0;
 	width: 50%;
 	border-right: 1px solid #fff;
@@ -828,7 +828,7 @@ figure.effect-milo p {
 	transform: translate3d(-40px,0,0);
 }
 
-figure.effect-milo:hover p {
+.effect-marley.effect-milo:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -838,21 +838,21 @@ figure.effect-milo:hover p {
 /***** Dexter *****/
 /*---------------*/
 
-figure.effect-dexter {
+.effect-marley.effect-dexter {
 	background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
 	background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
 }
 
-figure.effect-dexter img {
+.effect-marley.effect-dexter img {
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
 }
 
-figure.effect-dexter:hover img {
+.effect-marley.effect-dexter:hover img {
 	opacity: 0.4;
 }
 
-figure.effect-dexter figcaption::after {
+.effect-marley.effect-dexter .marley-caption::after {
 	position: absolute;
 	right: 30px;
 	bottom: 30px;
@@ -867,17 +867,17 @@ figure.effect-dexter figcaption::after {
 	transform: translate3d(0,-100%,0);
 }
 
-figure.effect-dexter:hover figcaption::after {
+.effect-marley.effect-dexter:hover .marley-caption::after {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-dexter figcaption {
+.effect-marley.effect-dexter .marley-caption {
 	padding: 3em;
 	text-align: left;
 }
 
-figure.effect-dexter p {
+.effect-marley.effect-dexter p {
 	position: absolute;
 	right: 60px;
 	bottom: 60px;
@@ -889,7 +889,7 @@ figure.effect-dexter p {
 	transform: translate3d(0,-100px,0);
 }
 
-figure.effect-dexter:hover p {
+.effect-marley.effect-dexter:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -899,11 +899,11 @@ figure.effect-dexter:hover p {
 /***** Sarah *****/
 /*---------------*/
 
-figure.effect-sarah {
+.effect-marley.effect-sarah {
 	background: #42b078;
 }
 
-figure.effect-sarah img {
+.effect-marley.effect-sarah img {
 	max-width: none;
 	width: -webkit-calc(100% + 20px);
 	width: calc(100% + 20px);
@@ -915,23 +915,23 @@ figure.effect-sarah img {
 	backface-visibility: hidden;
 }
 
-figure.effect-sarah:hover img {
+.effect-marley.effect-sarah:hover img {
 	opacity: 0.4;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-sarah figcaption {
+.effect-marley.effect-sarah .marley-caption {
 	text-align: left;
 }
 
-figure.effect-sarah h2 {
+.effect-marley.effect-sarah h2 {
 	position: relative;
 	overflow: hidden;
 	padding: 0.5em 0;
 }
 
-figure.effect-sarah h2::after {
+.effect-marley.effect-sarah h2::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -945,12 +945,12 @@ figure.effect-sarah h2::after {
 	transform: translate3d(-100%,0,0);
 }
 
-figure.effect-sarah:hover h2::after {
+.effect-marley.effect-sarah:hover h2::after {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-sarah p {
+.effect-marley.effect-sarah p {
 	padding: 1em 0;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -959,7 +959,7 @@ figure.effect-sarah p {
 	transform: translate3d(100%,0,0);
 }
 
-figure.effect-sarah:hover p {
+.effect-marley.effect-sarah:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -969,7 +969,7 @@ figure.effect-sarah:hover p {
 /***** Zoe *****/
 /*---------------*/
 
-figure.effect-zoe figcaption {
+.effect-marley.effect-zoe .marley-caption {
 	top: auto;
 	bottom: 0;
 	padding: 1em;
@@ -982,22 +982,22 @@ figure.effect-zoe figcaption {
 	transform: translate3d(0,100%,0);
 }
 
-figure.effect-zoe h2 {
+.effect-marley.effect-zoe h2 {
 	float: left;
 }
 
-figure.effect-zoe p.icon-links a {
+.effect-marley.effect-zoe p.icon-links a {
 	float: right;
 	color: #3c4a50;
 	font-size: 1.4em;
 }
 
-figure.effect-zoe:hover p.icon-links a:hover,
-figure.effect-zoe:hover p.icon-links a:focus {
+.effect-marley.effect-zoe:hover p.icon-links a:hover,
+.effect-marley.effect-zoe:hover p.icon-links a:focus {
 	color: #252d31;
 }
 
-figure.effect-zoe p.description {
+.effect-marley.effect-zoe p.description {
 	position: absolute;
 	bottom: 8em;
 	padding: 2em;
@@ -1010,15 +1010,15 @@ figure.effect-zoe p.description {
 	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
 }
 
-figure.effect-zoe h2,
-figure.effect-zoe p.icon-links a {
+.effect-marley.effect-zoe h2,
+.effect-marley.effect-zoe p.icon-links a {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,200%,0);
 	transform: translate3d(0,200%,0);
 }
 
-figure.effect-zoe p.icon-links a span::before {
+.effect-marley.effect-zoe p.icon-links a span::before {
 	display: inline-block;
 	padding: 8px 10px;
 	font-family: 'feathericons';
@@ -1039,37 +1039,37 @@ figure.effect-zoe p.icon-links a span::before {
 	content: '\e024';
 }
 
-figure.effect-zoe h2 {
+.effect-marley.effect-zoe h2 {
 	display: inline-block;
 }
 
-figure.effect-zoe:hover p.description {
+.effect-marley.effect-zoe:hover p.description {
 	opacity: 1;
 }
 
-figure.effect-zoe:hover figcaption,
-figure.effect-zoe:hover h2,
-figure.effect-zoe:hover p.icon-links a {
+.effect-marley.effect-zoe:hover .marley-caption,
+.effect-marley.effect-zoe:hover h2,
+.effect-marley.effect-zoe:hover p.icon-links a {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-zoe:hover h2 {
+.effect-marley.effect-zoe:hover h2 {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
 }
 
-figure.effect-zoe:hover p.icon-links a:nth-child(3) {
+.effect-marley.effect-zoe:hover p.icon-links a:nth-child(3) {
 	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
 }
 
-figure.effect-zoe:hover p.icon-links a:nth-child(2) {
+.effect-marley.effect-zoe:hover p.icon-links a:nth-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
 
-figure.effect-zoe:hover p.icon-links a:first-child {
+.effect-marley.effect-zoe:hover p.icon-links a:first-child {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
@@ -1078,24 +1078,24 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 /***** Chico *****/
 /*---------------*/
 
-figure.effect-chico img {
+.effect-marley.effect-chico img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: scale(1.12);
 	transform: scale(1.12);
 }
 
-figure.effect-chico:hover img {
+.effect-marley.effect-chico:hover img {
 	opacity: 0.5;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
 
-figure.effect-chico figcaption {
+.effect-marley.effect-chico .marley-caption {
 	padding: 3em;
 }
 
-figure.effect-chico figcaption::before {
+.effect-marley.effect-chico .marley-caption::before {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -1107,26 +1107,26 @@ figure.effect-chico figcaption::before {
 	transform: scale(1.1);
 }
 
-figure.effect-chico figcaption::before,
-figure.effect-chico p {
+.effect-marley.effect-chico .marley-caption::before,
+.effect-marley.effect-chico p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-chico h2 {
+.effect-marley.effect-chico h2 {
 	padding: 20% 0 20px 0;
 }
 
-figure.effect-chico p {
+.effect-marley.effect-chico p {
 	margin: 0 auto;
 	max-width: 200px;
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 }
 
-figure.effect-chico:hover figcaption::before,
-figure.effect-chico:hover p {
+.effect-marley.effect-chico:hover .marley-caption::before,
+.effect-marley.effect-chico:hover p {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -1137,7 +1137,7 @@ figure.effect-chico:hover p {
 		padding: 0 10px;
 		text-align: center;
 	}
-	.marley-container figure {
+	.marley-container .effect-marley {
 		display: inline-block;
 		float: none;
 		margin: 10px auto;

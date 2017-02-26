@@ -454,3 +454,8 @@ textarea:hover {
 .gallery-sect{
   margin-left: 5%;
 }
+
+/*Marley overrides*/
+.marley-container .effect-marley.marley-small {
+  max-height: 250px;
+}
